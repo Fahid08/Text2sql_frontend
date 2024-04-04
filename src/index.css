@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* body{
+} */
+.ant-layout-sider-trigger{
+    background: #222121!important;
+    top: 64px!important;
+}
+.ant-layout-sider{
+    height: 100vh;
+    border-left: 2px solid #363434;
+}
+.result-container{
+    height: 400px;
+    overflow-y: auto;
+}
+
+button{
+    border-radius: 20px!important;
+}
+.ant-empty-description{
+    color: white!important;
+    text-transform: capitalize;
+    font-family: monospace;
+}
+.ant-empty-image{
+    margin-top: 5rem;
+}
