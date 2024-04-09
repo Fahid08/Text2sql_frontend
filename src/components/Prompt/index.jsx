@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import sqlFormatter from "@sqltools/formatter";
 // const baseUrl = "http://127.0.0.1:8000/invocations/querysql";
 const baseUrl =
-	"https://uj7fyddl6oea72cu576ogfu6vu0qxhmu.lambda-url.us-east-1.on.aws/";
+	"https://uj7fyddl6oea72cu576ogfu6vu0qxhmu.lambda-url.us-east-1.on.aws/query";
 const Prompt = ({ isOpen, databaseName, handleResponse, closeSidebar }) => {
 	const [prompt, setPrompt] = useState("");
 	const [message, setMessage] = useState(null);
