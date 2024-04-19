@@ -1,16 +1,17 @@
-// LayoutContainer.js
-import React, { useState } from "react";
-import { Flex, Layout } from "antd";
-import toast, { Toaster } from "react-hot-toast";
+import React, { useState, useEffect } from "react";
+import { Flex, Layout, Modal, Button } from "antd";
+import { Toaster } from "react-hot-toast";
 import SqlEditor from "../SqlEditor/SqlEditor";
 import { DoubleRightOutlined, DoubleLeftOutlined } from "@ant-design/icons";
 import Table from "../Table/Table";
 import Buttons from "../Buttons/Buttons";
-import { Spin } from "antd";
 import { databaseNames } from "../../constants/dbname";
 import Prompt from "../Prompt";
+import "./style.css";
+import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Content, Sider } = Layout;
 
 const LayoutContainer = () => {
   const [value, setValue] = useState(
@@ -25,15 +26,38 @@ const LayoutContainer = () => {
   const [selectedDatabase, setSelectedDatabase] = useState(databaseNames[0]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [showInstructions, setShowInstructions] = useState(true);
+  const navigate = useNavigate();
+  const [showPopup, setShowPopup] = useState(false);
+  useEffect(() => {
+    const hasShownPopup = localStorage.getItem("shownPopup");
+    if (!hasShownPopup) {
+      // Show the popup for the first time
+      setShowPopup(true);
+      // Mark the popup as shown in local storage
+      localStorage.setItem("shownPopup", true);
+    }
+  }, []); // Empty dependency array ensures this effect runs only once
 
   const handleSideBarShow = () => {
     setCollapsed(!collapsed);
   };
+
+  const handleCancel = () => {
+    setShowInstructions(false);
+    setShowInstructions(false);
+  };
+
+  const handleMoveToGuide = () => {
+    setShowInstructions(false);
+    navigate("/how-to-use");
+  };
+
+
   return (
     <div className="layout-container">
       <Flex>
         <Layout style={{ minHeight: "100vh" }}>
-          <Header style={headerStyle}>TEXT 2 SQL</Header>
           <Layout>
             <Content>
               <Buttons
@@ -43,7 +67,7 @@ const LayoutContainer = () => {
                 setError={setError}
                 setCSVData={setCSVData}
                 showSideBar={handleSideBarShow}
-                value={value} // Use selectedResponse if available
+                value={value}
                 setValue={setValue}
                 setDefaults={setDefaults}
                 defaults={defaults}
@@ -53,10 +77,7 @@ const LayoutContainer = () => {
                 databaseNames={databaseNames}
                 isOpen={!collapsed}
               />
-              <SqlEditor
-                value={value} // Use selectedResponse if available
-                setValue={setValue}
-              />
+              <SqlEditor value={value} setValue={setValue} />
               <Table
                 query={query}
                 headers={headers}
@@ -74,7 +95,7 @@ const LayoutContainer = () => {
               />
             </Content>
             <Sider
-              width={collapsed ? 80 : 550}
+              width={collapsed ? 80 : 800}
               collapsible
               collapsed={collapsed}
               onCollapse={(value) => setCollapsed(value)}
@@ -92,22 +113,37 @@ const LayoutContainer = () => {
               />
             </Sider>
           </Layout>
-          <Footer>footer</Footer>
         </Layout>
       </Flex>
+      {showPopup && (
+        <Modal
+          className="overflow-hidden"
+          title="Important Note"
+          open={showInstructions}
+          onCancel={() => {
+            setShowInstructions(false);
+            setShowInstructions(false);
+          }}
+          footer={[
+            <Button key="how-to-use" onClick={handleMoveToGuide}>
+              Continue
+            </Button>,
+            <Button key="continue" onClick={handleCancel}>
+              Cancel
+            </Button>,
+          ]}
+        >
+          <p>
+            Please ensure to review the instructions thoroughly before
+            utilizing Text2SQL model. Click continue to read instructions.
+          </p>
+        </Modal>
+      )}
     </div>
   );
 };
 
 export default LayoutContainer;
-
-const headerStyle = {
-  textAlign: "center",
-  color: "#fff",
-  backgroundColor: "black",
-  fontSize: 20,
-  letterSpacing: 4,
-};
 
 const siderStyle = {
   textAlign: "center",

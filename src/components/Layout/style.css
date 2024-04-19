@@ -1,0 +1,19 @@
+.ant-modal-footer button:hover {
+  color: white !important;
+  border-color: white !important;
+}
+.ant-modal-close-x:hover {
+  color: white;
+}
+.ant-modal {
+  top: 40%;
+}
+@media (max-width: 768px) {
+  .ant-layout-sider {
+    flex: 0 0 500px !important;
+    min-width: unset !important;
+  }
+  .ant-modal {
+    width: 400px !important;
+  }
+}

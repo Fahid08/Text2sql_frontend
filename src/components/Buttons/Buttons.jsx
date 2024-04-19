@@ -4,8 +4,7 @@ import { Spin } from "antd";
 import GetTableInfo from "../Table/GetTableInfo";
 import { Input, Form, Select } from "antd";
 import "./style.css";
-// const baseUrl = "http://127.0.0.1:8000/invocations/executesql";
-const baseUrl = "https://uj7fyddl6oea72cu576ogfu6vu0qxhmu.lambda-url.us-east-1.on.aws/executequery";
+const baseUrl = "https://uj7fyddl6oea72cu576ogfu6vu0qxhmu.lambda-url.us-east-1.on.aws/executequery"
 const { Option } = Select;
 function Buttons({
   setCSVData,
@@ -208,6 +207,7 @@ function Buttons({
             defaultValue={selectedDatabase}
             onChange={handleChangeDatabase}
             className="w-full"
+            style={{width:205}}
           >
             {databaseNames.map((dbName) => (
               <Option key={dbName} value={dbName}>

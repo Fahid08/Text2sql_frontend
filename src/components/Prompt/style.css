@@ -25,7 +25,7 @@
 }
 .notebook-btn {
   position: absolute;
-  bottom: 205px;
+  bottom: 224px;
   right: 31px;
   background: #1e1d1d;
   font-size: 13px;
@@ -57,9 +57,29 @@
 textarea {
   height: 10vh !important;
 }
-.ant-spin-dot{
+.ant-spin-dot {
   margin-top: 6rem;
 }
-.ant-spin-dot-item{
-  background: #d0d0d0!important;
+.ant-spin-dot-item {
+  background: #d0d0d0 !important;
+}
+.ant-spin {
+  overflow: hidden !important;
+}
+
+@media (max-width: 768px) {
+  textarea {
+    width: 400px !important;
+  }
+  .prompt-form form {
+    right: 53px !important;
+  }
+}
+@media (max-width: 480px) {
+  textarea {
+    width: 350px !important;
+  }
+  .prompt-form form {
+    right: 53px !important;
+  }
 }

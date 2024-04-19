@@ -1,38 +1,39 @@
-.ant-select-selector{
-    background: #1e1d1d!important;
-    color: white!important;
-    font-size: 18px!important;
-    border: none!important;
-    outline: none!important;
+.ant-select-selector {
+  background: #1e1d1d !important;
+  color: white !important;
+  font-size: 18px !important;
+  border: none !important;
+  outline: none !important;
 }
-.ant-select-arrow{
-    color: white!important;
+.ant-select-arrow {
+  color: white !important;
 }
 
-button{
-    background: #1e1d1d;
-    transition: all 0.3s ease-in-out;
-    font-size: 18px;
+button {
+  background: #1e1d1d;
+  transition: all 0.3s ease-in-out;
+  font-size: 18px;
 }
-button:hover,.ant-select-selector:hover{
-    background-color: rgb(15, 15, 15)!important;
+button:hover,
+.ant-select-selector:hover {
+  background-color: rgb(15, 15, 15) !important;
 }
 
 .ant-select-selection-item {
-    color: white !important;
+  color: white !important;
 }
-.ant-select-single{
-    height: 42px!important;
-    border-radius: 13px;
+.ant-select-single {
+  height: 42px !important;
+  border-radius: 13px;
 }
 
 /* style.css */
 
-@media screen and (max-width: 680px){
-    .btn-container button{
-        font-size: 14px;
-    }
-    .btn-container{
-        justify-content: center;
-    }
+@media screen and (max-width: 680px) {
+  .btn-container button {
+    font-size: 14px;
+  }
+  .btn-container {
+    justify-content: center;
+  }
 }

@@ -4,7 +4,7 @@ import AceEditor from "react-ace";
 import "ace-builds/src-min-noconflict/mode-mysql";
 import "ace-builds/src-noconflict/theme-monokai";
 import "ace-builds/src-min-noconflict/ext-language_tools";
-
+import './style.css'
 function SqlEditor({ setValue, value }) {
   return (
     <div className="editor-container">
@@ -28,7 +28,6 @@ function SqlEditor({ setValue, value }) {
         }}
         value={value}
         onChange={(value) => {
-          console.log(value);
           setValue(value)}}
         showLineNumbers
       />

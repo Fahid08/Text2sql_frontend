@@ -1,42 +1,42 @@
-.result-header{
-    background-color: #292929f0;
-    padding: 0px 20px;
-    border-top: 2px solid #363434;
-    border-bottom: 2px solid #363434;
+.result-header {
+  background-color: #292929f0;
+  padding: 0px 20px;
+  border-top: 2px solid #363434;
+  border-bottom: 2px solid #363434;
 }
-.result-header h1{
-    padding: 16px;
-    font-size: 26px;
-    font-weight: bold;
-    color: white;
-    letter-spacing: 3px;
+.result-header h1 {
+  padding: 16px;
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 3px;
 }
-.query-results{
+.query-results {
   border-top: 2px solid #363434;
   /* height: 80vh; */
   overflow-y: auto;
 }
-.table-height{
-  height:100vh;
+.table-height {
+  height: 100vh;
 }
 /* width */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 10px;
-}
+} */
 
 /* Track */
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px rgb(9, 9, 9); 
   border-radius: 10px;
 }
- 
+  */
 /* Handle */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   background: rgb(20, 16, 16); 
   border-radius: 10px;
-}
+} */
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
   background: rgb(0, 0, 0);
-}
+} */
