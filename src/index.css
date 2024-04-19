@@ -2,36 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* body{
-} */
-.ant-layout-sider-trigger{
-    background: #222121!important;
-    top: 64px!important;
-}
-.ant-layout-sider{
-    height: 100vh;
-    border-left: 2px solid #363434;
-}
-.result-container{
-    height: 400px;
-    overflow-y: auto;
+.ant-layout-sider-trigger {
+  background: transparent !important;
+  top: 0px !important;
+  position: absolute !important;
+  width: 75px !important;
+  overflow: hidden !important;
 }
 
-button{
-    border-radius: 20px!important;
+.ant-layout-sider {
+  border-left: 2px solid #363434;
 }
-.ant-empty-description{
-    color: white!important;
-    text-transform: capitalize;
-    font-family: monospace;
+.result-container {
+  height: 400px;
+  overflow-y: auto;
 }
-.ant-empty-image{
-    margin-top: 5rem;
+
+button {
+  border-radius: 20px !important;
+  overflow: hidden;
+}
+.ant-empty-description {
+  color: white !important;
+  text-transform: capitalize;
+  font-family: monospace;
+}
+.ant-empty-image {
+  margin-top: 5rem;
+}
+
+@media (max-width: 820px) {
+  * {
+    overflow-x: hidden;
+  }
 }
