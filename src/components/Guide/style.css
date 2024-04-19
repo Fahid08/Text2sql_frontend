@@ -1,0 +1,36 @@
+#react-doc-viewer #header-bar {
+  display: none !important;
+}
+#pdf-controls {
+  /* top: 100px;
+  display: flex;
+  flex-direction: column;
+  position: fixed; */
+}
+.ncPVb {
+  padding: 10px !important;
+}
+.react-pdf__Document {
+  zoom: 60% !important;
+}
+.react-pdf__Page {
+  overflow: hidden !important;
+}
+.react-pdf__Page__canvas {
+  border: 1px solid #e1e0e0 !important;
+  border-radius: 8px !important;
+}
+#react-doc-viewer #pdf-zoom-in,
+#pdf-zoom-out,
+#pdf-zoom-reset,
+#pdf-toggle-pagination,
+#pdf-download {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 995px) {
+  .react-pdf__Document {
+    zoom: unset !important;
+  }
+}

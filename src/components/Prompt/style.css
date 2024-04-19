@@ -1,0 +1,85 @@
+.message-container {
+  height: 50vh;
+  overflow: auto;
+}
+.server-response {
+  text-align: left;
+  padding: 0px 15px;
+}
+.user-prompt {
+  text-align: right;
+  height: 14vh;
+  padding: 0px 15px;
+}
+.server-response span,
+.user-prompt span {
+  background: #1e1d1d;
+  padding: 10px 20px;
+  border-radius: 11px 14px 0px;
+  box-shadow: 1px 1px 9px 0px #3b3b3b;
+}
+
+.notebook {
+  display: flex;
+  margin: 18px 30px 0px 22px;
+}
+.notebook-btn {
+  position: absolute;
+  bottom: 224px;
+  right: 31px;
+  background: #1e1d1d;
+  font-size: 13px;
+  padding: 12px;
+}
+.notebook-btn > span {
+  display: block !important;
+}
+.notebook-btn:hover {
+  background-color: rgb(15, 15, 15) !important;
+  color: white !important;
+}
+.result > span {
+  background: #1e1d1d !important;
+  color: rgb(248, 248, 242) !important;
+  border-radius: 3px;
+  display: flex;
+  line-height: 1.42857;
+  overflow-x: auto;
+  white-space: pre;
+  width: max-content;
+  text-align: left;
+  font-size: 18px;
+  margin: 30px 20px 0px 20px;
+  padding: 10px;
+  border: 1px solid gray;
+  box-shadow: 1px 1px 9px 0px #3b3b3b;
+}
+textarea {
+  height: 10vh !important;
+}
+.ant-spin-dot {
+  margin-top: 6rem;
+}
+.ant-spin-dot-item {
+  background: #d0d0d0 !important;
+}
+.ant-spin {
+  overflow: hidden !important;
+}
+
+@media (max-width: 768px) {
+  textarea {
+    width: 400px !important;
+  }
+  .prompt-form form {
+    right: 53px !important;
+  }
+}
+@media (max-width: 480px) {
+  textarea {
+    width: 350px !important;
+  }
+  .prompt-form form {
+    right: 53px !important;
+  }
+}
