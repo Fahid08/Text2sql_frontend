@@ -24,12 +24,12 @@
   margin: 18px 30px 0px 22px;
 }
 .notebook-btn {
-  position: absolute;
-  bottom: 224px;
-  right: 31px;
   background: #1e1d1d;
-  font-size: 13px;
-  padding: 12px;
+    bottom: 172px;
+    font-size: 13px;
+    padding: 12px;
+    position: fixed;
+    right: 66px;
 }
 .notebook-btn > span {
   display: block !important;
